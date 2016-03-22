@@ -1,7 +1,7 @@
 
-# Counter (counter)
+# Redux-clock
 
-> ...
+> 参考: http://webdesign-dackel.com/2015/11/03/redux-periodic-action/
 
 ## Running your project
 
