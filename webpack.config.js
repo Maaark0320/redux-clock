@@ -24,12 +24,16 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     devFlagPlugin,
-    new ExtractTextPlugin('app.css')
+    new ExtractTextPlugin('app.scss')
   ],
   module: {
     loaders: [
-      { test: /\.(js|jsx)$/, loaders: ['babel'], exclude: /node_modules/ },
-      { test: /\.css$/, loader: ExtractTextPlugin.extract('css-loader?module!cssnext-loader') }
+      { test: /\.(js|jsx)$/, loader: 'babel', exclude: /node_modules/,
+        query: {
+          plugins: ['transform-decorators-legacy']
+        }
+      },
+      { test: /\.(css|scss)$/, loader: 'style!css' }
     ]
   },
   resolve: {

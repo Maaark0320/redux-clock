@@ -1,13 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './containers/App';
-// import 'todomvc-app-css/index.css';
+import React, { Component, PropTypes } from 'react'
+import ReactDOM from 'react-dom'
+import App from './containers/App'
 
-import { Provider } from 'react-redux';
-import configreStore from './store/configreStore';
+import { Provider } from 'react-redux'
+import configureStore from './store/configureStore'
+require('../css/app.css')
 
-const store = configreStore();
-
+const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>

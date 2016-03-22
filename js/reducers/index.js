@@ -1,8 +1,8 @@
-import { combineReducers } from 'redux';
-import todos from './todo';
+import { combineReducers } from 'redux'
+import clock from './clock'
 
-const rootReducer = combineReducers({
-  todos
+const reducer = combineReducers({
+  clock
 });
 
-export default rootReducer;
+export default reducer;
